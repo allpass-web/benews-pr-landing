@@ -1,0 +1,8 @@
+# 두 대 이상의 PC에서 작업할 때 줄바꿈 차이로 diff 가 지저분해지지 않도록 LF 로 통일합니다.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.woff2 binary
+*.ico binary

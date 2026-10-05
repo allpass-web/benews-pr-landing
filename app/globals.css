@@ -1,0 +1,116 @@
+/*
+ * Pretendard 는 app/layout.tsx 의 <link> 로 불러옵니다.
+ * (public/fonts/pretendard/pretendardvariable-dynamic-subset.css — 로컬 호스팅 동적 서브셋)
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-pretendard: "Pretendard Variable", "Pretendard", -apple-system,
+      BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Malgun Gothic",
+      sans-serif;
+    /* 고정 헤더 높이 — 앵커 스크롤 오프셋에 사용 */
+    --header-h: 60px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-h: 72px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* 고정 헤더만큼 앵커 위치를 아래로 밀어 준다 */
+    scroll-padding-top: var(--header-h);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    /* 모바일 가로 스크롤 방지 */
+    overflow-x: hidden;
+  }
+
+  /* 섹션 앵커도 개별적으로 오프셋을 갖도록 */
+  [id] {
+    scroll-margin-top: var(--header-h);
+  }
+
+  /* 키보드 포커스 링 (토큰 색만 사용) */
+  :focus-visible {
+    outline: 3px solid #ffc72c;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    word-break: keep-all;
+  }
+
+  p,
+  li,
+  dd {
+    word-break: keep-all;
+  }
+}
+
+@layer components {
+  /* 페이지 공통 가로 거터 + 최대폭 */
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8;
+  }
+
+  /* 섹션 수직 여백 (넉넉하게) */
+  .section-y {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /*
+   * 아직 채워지지 않은 {{TODO}} 값 표시.
+   * 콘텐츠를 모두 채운 뒤에는 이 블록만 지우면 표시가 사라집니다.
+   */
+  [data-todo="true"] {
+    @apply rounded-[4px] border border-dashed border-yellow-400/70 bg-yellow-400/10 px-1.5 py-0.5
+           text-[0.9em] font-medium not-italic opacity-90;
+  }
+}
+
+@layer utilities {
+  /* 모바일 탭 칩 가로 스크롤에서 스크롤바 숨김 */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 네이비 섹션 상단의 은은한 광원 (토큰 색만 사용) */
+  .navy-glow {
+    background-image: radial-gradient(
+      60% 50% at 50% 0%,
+      rgba(30, 58, 102, 0.55) 0%,
+      rgba(11, 27, 51, 0) 70%
+    );
+  }
+}
