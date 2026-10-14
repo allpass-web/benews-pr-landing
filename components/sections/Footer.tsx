@@ -32,8 +32,10 @@ export function Footer() {
                 <a
                   key={link.label}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  /* 내부 페이지(/privacy)는 같은 탭에서 연다 */
+                  {...(link.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="text-sm font-semibold text-white/80 transition-colors hover:text-yellow-400"
                 >
                   {link.label}
