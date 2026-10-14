@@ -11,6 +11,10 @@ import { isTodo } from "@/lib/utils";
  */
 export function KakaoFloat() {
   const { url, label, tooltip } = floating.kakao;
+
+  // URL 이 비어 있으면(채널 미개설) 버튼을 아예 띄우지 않는다.
+  if (!url) return null;
+
   const ready = !isTodo(url);
 
   return (

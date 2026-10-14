@@ -226,8 +226,8 @@ export const easyWriting = {
   headline: "**기사 작성, 어렵지 않습니다**",
   body: "키워드, 사진, 간단한 회사 소개만 보내 주세요. 전문 기자가 업종에 맞춰 기사 초안을 작성해 드립니다.",
   badges: [
-    { icon: "clock" as IconKey, label: "{{TODO: 송출 소요시간 문구 (예: 자료 전달 후 ○일 내 송출)}}" },
-    { icon: "coins" as IconKey, label: "{{TODO: 최저가 문구 (예: ○만 원부터)}}" },
+    { icon: "clock" as IconKey, label: "자료 전달 후 당일 송출" },
+    { icon: "coins" as IconKey, label: "프리랜서 기자가 되면 송출비용 0원" },
   ],
   steps: [
     { no: "01", icon: "send" as IconKey, title: "자료 전달", desc: "키워드 · 사진 · 회사 소개만 보내 주세요." },
@@ -420,7 +420,8 @@ export const floating = {
     ctaLabel: "상담 신청",
   },
   kakao: {
-    url: "{{TODO: 카카오 채널 URL}}",
+    /** 비워 두면 플로팅 버튼 자체가 표시되지 않는다. 채널이 열리면 URL 만 넣으면 된다. */
+    url: "",
     label: "카카오톡 채널 상담",
     tooltip: "궁금한 점을 바로 물어보세요",
   },
