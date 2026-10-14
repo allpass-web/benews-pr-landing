@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  브랜드경제신문 언론홍보 랜딩페이지 — 콘텐츠 단일 소스 (Single Source of Truth)
+ *  미디어허브 언론홍보 랜딩페이지 — 콘텐츠 단일 소스 (Single Source of Truth)
  * ============================================================================
  *
  *  모든 카피 · 수치 · 링크 · 상품 목록 · 이미지 경로를 이 파일에서만 관리합니다.
@@ -47,11 +47,11 @@ export type IconKey =
 /* -------------------------------------------------------------------------- */
 
 export const meta = {
-  siteName: "브랜드경제신문",
-  title: "{{TODO: SEO 타이틀 (예: 브랜드경제신문 언론홍보 | 기획부터 송출까지 원스톱)}}",
+  siteName: "미디어허브",
+  title: "미디어허브 언론홍보 | 기획부터 송출까지 원스톱",
   description:
-    "{{TODO: SEO 설명문 80~120자 (예: 자체 언론사가 직접 기사를 기획·작성·발행합니다. 포털 노출과 결과 리포트까지 한 번에.)}}",
-  keywords: "{{TODO: 검색 키워드 쉼표 구분 (예: 언론홍보, 보도자료 배포, 기사 송출)}}",
+    "자체 언론사가 직접 기사를 기획·작성·발행합니다. 브랜드경제신문·대한민국소비자신문을 운영하는 미디어허브가 포털 노출부터 결과 리포트까지 한 번에 책임집니다.",
+  keywords: "언론홍보, 보도자료 배포, 기사 송출, 미디어허브, 브랜드경제신문, 기업홍보, 포털 뉴스 노출, 인터뷰 기사, 기획기사",
   /** 배포 후 실제 도메인으로 교체 (OG 태그 절대경로 생성에 사용) */
   url: "{{TODO: 랜딩페이지 배포 주소 (예: https://pr.benews.co.kr)}}",
   ogImage: "/images/og.png",
@@ -66,14 +66,14 @@ export const header = {
   logo: {
     src: "/images/logo.svg",
     /** 로고 이미지가 없거나 로딩에 실패하면 이 텍스트 로고가 대신 표시됩니다. */
-    fallbackText: "브랜드경제신문",
-    alt: "브랜드경제신문",
+    fallbackText: "미디어허브",
+    alt: "미디어허브",
     width: 168,
     height: 28,
   },
   nav: [
     { label: "홍보의 중요성", href: "#importance" },
-    { label: "왜 브랜드경제신문인가요?", href: "#why" },
+    { label: "왜 미디어허브인가요?", href: "#why" },
     { label: "기사 유형 및 예시", href: "#articles" },
     { label: "상담 문의하기", href: "#contact" },
   ],
@@ -100,7 +100,7 @@ export const hero = {
   rotateIntervalMs: 2500,
   line3: "그런데, 아무도 모른다면?",
   /** 스크롤하면 순서대로 등장 */
-  reveal: ["결국 답은 언론홍보입니다", "정답은 **브랜드경제신문**"],
+  reveal: ["결국 답은 언론홍보입니다", "정답은 **미디어허브**"],
   cta: { label: "무료 상담 신청하기", href: "#contact" },
   scrollHint: "아래로 스크롤",
 } as const;
@@ -115,7 +115,7 @@ export const report = {
   sub: "기사 송출 후 노출 현황과 반응을 한눈에 볼 수 있도록 결과 리포트를 드립니다.",
   mockup: {
     src: "/images/report-mockup.png",
-    alt: "브랜드경제신문 언론홍보 결과 리포트 예시 화면",
+    alt: "미디어허브 언론홍보 결과 리포트 예시 화면",
     width: 720,
     height: 540,
   },
@@ -134,18 +134,18 @@ export const report = {
 } as const;
 
 /* -------------------------------------------------------------------------- */
-/* 3-3. 서비스 소개 — 왜 브랜드경제신문인가요?                                  */
+/* 3-3. 서비스 소개 — 왜 미디어허브인가요?                                      */
 /* -------------------------------------------------------------------------- */
 
 export const why = {
   id: "why",
   eyebrow: "Why BENEWS",
-  headline: "왜 브랜드경제신문인가요?",
+  headline: "왜 미디어허브인가요?",
   cards: [
     {
       icon: "newspaper" as IconKey,
       title: "자체 언론사 직접 운영",
-      desc: "대행사를 거치지 않고, 언론사가 직접 기사를 작성하고 발행합니다.",
+      desc: "**브랜드경제신문·대한민국소비자신문**을 직접 운영합니다. 대행사를 거치지 않고 언론사가 직접 기사를 작성하고 발행합니다.",
     },
     {
       icon: "share" as IconKey,
@@ -165,7 +165,7 @@ export const why = {
 /* -------------------------------------------------------------------------- */
 
 export const stats = {
-  headline: "숫자로 증명하는 **브랜드경제신문**",
+  headline: "숫자로 증명하는 **미디어허브**",
   /**
    * 0 에서 시작해 카운트업 되는 숫자 카드 4개.
    *  - value  : 카운트업 목표 숫자 (숫자만)
@@ -190,7 +190,7 @@ export const stats = {
 export const feedback = {
   eyebrow: "홍보 대행의 가장 큰 불만",
   headline: "**'답이 늦다'**",
-  body: "브랜드경제신문은 전담 담당자가 바로 응답합니다. 혼자 고민하지 말고, 기사 전문가와 함께하세요.",
+  body: "미디어허브는 전담 담당자가 바로 응답합니다. 혼자 고민하지 말고, 기사 전문가와 함께하세요.",
   image: {
     src: "/images/feedback.png",
     alt: "전담 담당자가 빠르게 응답하는 모습을 나타낸 일러스트",
@@ -342,7 +342,7 @@ export const contact = {
     { no: "03", title: "방문 경로", desc: "어떻게 방문하셨는지 알려 주시면 상담에 도움이 됩니다." },
   ],
   fields: {
-    company: { label: "회사명", placeholder: "예) 브랜드경제신문" },
+    company: { label: "회사명", placeholder: "예) 주식회사 ○○○" },
     name: { label: "담당자명", placeholder: "예) 홍길동" },
     phone: { label: "연락처", placeholder: "예) 010-1234-5678" },
     email: { label: "이메일", placeholder: "예) contact@example.com" },
@@ -380,12 +380,12 @@ export const contact = {
 /* -------------------------------------------------------------------------- */
 
 export const footer = {
-  company: { term: "상호", value: "{{TODO: 상호}}" },
-  ceo: { term: "대표", value: "{{TODO: 대표자명}}" },
-  bizNo: { term: "사업자등록번호", value: "{{TODO: 사업자등록번호}}" },
-  address: { term: "주소", value: "{{TODO: 주소}}" },
-  tel: { term: "대표번호", value: "{{TODO: 대표번호}}" },
-  email: { term: "이메일", value: "{{TODO: 이메일}}" },
+  company: { term: "상호", value: "(주)오픈엑스" },
+  ceo: { term: "대표", value: "김미진" },
+  bizNo: { term: "사업자등록번호", value: "310-81-34293" },
+  address: { term: "주소", value: "서울시 마포구 성암로 330, 8층 B동 808호" },
+  tel: { term: "대표번호", value: "010-4559-5049" },
+  email: { term: "이메일", value: "allpass@kakao.com" },
   links: [
     { label: "브랜드경제신문 바로가기", href: "https://benews.co.kr", external: true },
     { label: "개인정보처리방침", href: "{{TODO: 개인정보처리방침 URL}}", external: true },
@@ -400,7 +400,7 @@ export const floating = {
   stickyBar: {
     text: "맞춤 언론홍보 전략, 무료 상담받기",
     /** 숫자/하이픈만 넣어 주세요. tel: 링크로 자동 변환됩니다. */
-    phone: "{{TODO: 대표번호}}",
+    phone: "010-4559-5049",
     ctaLabel: "상담 신청",
   },
   kakao: {
