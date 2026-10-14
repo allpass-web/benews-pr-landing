@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 
 import { hero } from "@/content/site";
 import { AnchorButton } from "@/components/ui/Button";
@@ -10,18 +6,6 @@ import { Emphasis } from "@/components/ui/Text";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function Hero() {
-  const reduce = useReducedMotion();
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    if (hero.rotating.length <= 1) return;
-    const t = setInterval(
-      () => setIdx((i) => (i + 1) % hero.rotating.length),
-      hero.rotateIntervalMs
-    );
-    return () => clearInterval(t);
-  }, []);
-
   return (
     <section
       id={hero.id}
@@ -35,41 +19,26 @@ export function Hero() {
         </p>
 
         <h1 className="text-display text-white">
-          <span className="block">{hero.line1}</span>
+          <span className="sr-only">{hero.srHeadline}</span>
 
-          {/* 대괄호 문구 순환 */}
-          <span className="relative mt-2 block min-h-[1.3em] md:mt-3">
-            <span className="sr-only">
-              {hero.rotating.map((t) => `[ ${t} ]`).join(", ")}
+          <span aria-hidden="true">
+            <span className="block">{hero.lineTop}</span>
+
+            {/* 입력 기능 없는 장식용 검색창 (커서 깜빡임 + 돋보기) */}
+            <span className="hero-search">
+              <span className="hero-search__caret" />
+              <Search className="h-[0.9em] w-[0.9em] flex-none" strokeWidth={3} />
             </span>
-            <span aria-hidden="true" className="block">
-              {reduce ? (
-                <span className="text-yellow-400">[ {hero.rotating[idx]} ]</span>
-              ) : (
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.span
-                    key={idx}
-                    className="block text-yellow-400"
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -18 }}
-                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  >
-                    [ {hero.rotating[idx]} ]
-                  </motion.span>
-                </AnimatePresence>
-              )}
-            </span>
+
+            <span className="block">{hero.lineBottom}</span>
           </span>
-
-          <span className="mt-2 block md:mt-3">{hero.line3}</span>
         </h1>
 
         {/* 스크롤하면 순서대로 등장 */}
-        <div className="mt-14 space-y-3 md:mt-20 md:space-y-4">
-          {hero.reveal.map((line, i) => (
+        <div className="mt-14 space-y-1 md:mt-20">
+          {hero.sub.map((line, i) => (
             <Reveal key={line} delay={i * 0.15}>
-              <p className="text-xl font-extrabold text-white md:text-3xl">
+              <p className="text-[clamp(17px,2.4vw,26px)] font-bold leading-relaxed text-white">
                 <Emphasis text={line} tone="dark" />
               </p>
             </Reveal>

@@ -86,6 +86,21 @@
   }
 
   /*
+   * 히어로 H1 안의 장식용 검색창 (입력 기능 없음).
+   * em 단위라 font-size 만 바뀌면 커서·돋보기·여백이 함께 따라온다.
+   */
+  .hero-search {
+    @apply mb-[0.35em] mt-[0.3em] flex h-[1.9em] w-[min(100%,12em)] items-center justify-between
+           rounded-pill border-[0.1em] border-yellow-400 bg-yellow-400/10 pl-[0.9em] pr-[0.7em]
+           text-yellow-400;
+    font-size: clamp(18px, 3.1vw, 33px);
+  }
+
+  .hero-search__caret {
+    @apply inline-block h-[1em] w-[0.09em] animate-caret-blink rounded-[0.05em] bg-current;
+  }
+
+  /*
    * 아직 채워지지 않은 {{TODO}} 값 표시.
    * 콘텐츠를 모두 채운 뒤에는 이 블록만 지우면 표시가 사라집니다.
    */

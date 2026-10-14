@@ -5,3 +5,6 @@ out
 .env.local
 *.tsbuildinfo
 next-env.d.ts
+
+# 작업 지시 문서 (저장소에 포함하지 않음)
+HERO-UPDATE.md

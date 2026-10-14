@@ -48,9 +48,13 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-4px)" },
         },
+        "caret-blink": {
+          "50%": { opacity: "0" },
+        },
       },
       animation: {
         "bubble-float": "bubble-float 2.4s ease-in-out infinite",
+        "caret-blink": "caret-blink 1.06s steps(1, end) infinite",
       },
     },
   },

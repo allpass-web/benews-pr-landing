@@ -48,12 +48,12 @@ export type IconKey =
 
 export const meta = {
   siteName: "미디어허브",
-  title: "미디어허브 언론홍보 | 기획부터 송출까지 원스톱",
+  title: "미디어허브 | 언론사가 직접 쓰는 기사, 200여 개 언론사 동시 송출",
   description:
     "자체 언론사가 직접 기사를 기획·작성·발행합니다. 브랜드경제신문·대한민국소비자신문을 운영하는 미디어허브가 포털 노출부터 결과 리포트까지 한 번에 책임집니다.",
   keywords: "언론홍보, 보도자료 배포, 기사 송출, 미디어허브, 브랜드경제신문, 기업홍보, 포털 뉴스 노출, 인터뷰 기사, 기획기사",
   /** 배포 후 실제 도메인으로 교체 (OG 태그 절대경로 생성에 사용) */
-  url: "{{TODO: 랜딩페이지 배포 주소 (예: https://pr.benews.co.kr)}}",
+  url: "https://benews-pr-landing.vercel.app",
   ogImage: "/images/og.png",
   locale: "ko_KR",
 } as const;
@@ -88,19 +88,13 @@ export const header = {
 export const hero = {
   id: "importance",
   eyebrow: "홍보의 중요성",
-  line1: "우리 회사 이번에",
-  /** 2.5초마다 순환하는 대괄호 문구 */
-  rotating: [
-    "신제품 출시했어",
-    "투자 유치했어",
-    "새 매장 오픈했어",
-    "상 받았어",
-    "협약 맺었어",
-  ],
-  rotateIntervalMs: 2500,
-  line3: "그런데, 아무도 모른다면?",
-  /** 스크롤하면 순서대로 등장 */
-  reveal: ["결국 답은 언론홍보입니다", "정답은 **미디어허브**"],
+  /** H1 — 장식용 검색창을 사이에 두고 위/아래 두 줄로 나뉜다. */
+  lineTop: "우리 브랜드를",
+  lineBottom: "검색하면, 뭐가 나오나요?",
+  /** 검색창은 장식이라 스크린리더에는 이 문장 하나만 읽힌다. */
+  srHeadline: "우리 브랜드를 검색하면, 뭐가 나오나요?",
+  /** 서브 문구 2줄. **강조** 로 감싼 부분이 포인트 컬러로 표시된다. */
+  sub: ["언론사가 직접 쓴 기사를", "**200여 개 제휴 언론사**에 동시 송출합니다."],
   cta: { label: "무료 상담 신청하기", href: "#contact" },
   scrollHint: "아래로 스크롤",
 } as const;
