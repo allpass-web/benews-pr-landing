@@ -25,7 +25,7 @@ export function Services() {
         </Reveal>
 
         {/* 데스크탑 4열 × 2줄 / 태블릿 3열 / 모바일 2열 — 개수가 바뀌어도 깨지지 않는다 */}
-        <ul className="mt-12 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
+        <ul className="mt-12 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-2 md:gap-5 lg:grid-cols-4">
           {services.map((service, i) => (
             <Reveal as="li" key={service.id} delay={Math.min(i, 7) * 0.06}>
               <button

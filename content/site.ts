@@ -248,14 +248,30 @@ export const easyWriting = {
  * 배열 개수가 바뀌어도 레이아웃은 깨지지 않습니다 (데스크탑 4열 / 모바일 2열).
  */
 export const services = [
-  { id: "service-1", icon: "megaphone" as IconKey, name: "{{TODO: 상품명 1}}", desc: "{{TODO: 설명 1}}" },
-  { id: "service-2", icon: "fileText" as IconKey, name: "{{TODO: 상품명 2}}", desc: "{{TODO: 설명 2}}" },
-  { id: "service-3", icon: "mic" as IconKey, name: "{{TODO: 상품명 3}}", desc: "{{TODO: 설명 3}}" },
-  { id: "service-4", icon: "layers" as IconKey, name: "{{TODO: 상품명 4}}", desc: "{{TODO: 설명 4}}" },
-  { id: "service-5", icon: "quote" as IconKey, name: "{{TODO: 상품명 5}}", desc: "{{TODO: 설명 5}}" },
-  { id: "service-6", icon: "listChecks" as IconKey, name: "{{TODO: 상품명 6}}", desc: "{{TODO: 설명 6}}" },
-  { id: "service-7", icon: "share" as IconKey, name: "{{TODO: 상품명 7}}", desc: "{{TODO: 설명 7}}" },
-  { id: "service-8", icon: "barChart" as IconKey, name: "{{TODO: 상품명 8}}", desc: "{{TODO: 설명 8}}" },
+  {
+    id: "press-release",
+    icon: "megaphone" as IconKey,
+    name: "보도자료 배포",
+    desc: "언론사가 직접 기사를 작성해 포털과 제휴 매체에 동시 송출합니다.",
+  },
+  {
+    id: "press-reporter",
+    icon: "users" as IconKey,
+    name: "프리랜서 기자모집",
+    desc: "브랜드경제신문 기자로 등록하고 기자증(PRESS)을 발급받습니다.",
+  },
+  {
+    id: "media-launch",
+    icon: "newspaper" as IconKey,
+    name: "인터넷신문사 창간",
+    desc: "언론사 홈페이지 구축부터 기사 작성·송출·기자단 관리까지 한 번에 제공합니다.",
+  },
+  {
+    id: "brand-awards",
+    icon: "sparkles" as IconKey,
+    name: "브랜드어워즈",
+    desc: "KBS N 브랜드 어워즈 등 브랜드대상 참여부터 수상 홍보까지 지원합니다.",
+  },
 ] as const;
 
 export const serviceSection = {
