@@ -159,22 +159,28 @@ export const why = {
 /* -------------------------------------------------------------------------- */
 
 export const stats = {
-  headline: "숫자로 증명하는 **미디어허브**",
+  eyebrow: "WHY CHOOSE US",
+  headline: "숫자로 증명하는 **언론홍보**",
+  sub: [
+    "빠른 기사 송출부터 완료 URL 제공까지,",
+    "브랜드 신뢰를 높이는 체계적인 언론홍보 서비스를 제공합니다.",
+  ],
   /**
-   * 0 에서 시작해 카운트업 되는 숫자 카드 4개.
-   *  - value  : 카운트업 목표 숫자 (숫자만)
+   * 숫자 카드 4개.
+   *  - value  : 카운트업 목표 숫자 (숫자만). 0 이면 카운트업 없이 display 를 그대로 쓴다.
    *  - prefix / suffix : 숫자 앞뒤에 붙는 단위 (예: suffix "건", "%", "시간")
+   *  - display : 숫자로 표현할 수 없는 값 (예: "1:1"). value 가 0 일 때만 쓰인다.
    *  - label  : 숫자 아래 설명
-   * 참고 예시) 누적 발행 기사 수 / 파트너 기업 수 / 재의뢰율 / 평균 송출 소요시간
-   * ※ 확인된 실제 수치만 입력하세요. value 가 0 이면 카운트업 없이 TODO 로 표시됩니다.
+   * ※ 집계 수치를 넣을 때는 확인된 실제 값만 입력하고 note 에 기준일자를 적는다.
    */
   items: [
-    { value: 0, prefix: "", suffix: "", label: "{{TODO: 라벨 1}}", display: "{{TODO: 수치 1}}" },
-    { value: 0, prefix: "", suffix: "", label: "{{TODO: 라벨 2}}", display: "{{TODO: 수치 2}}" },
-    { value: 0, prefix: "", suffix: "", label: "{{TODO: 라벨 3}}", display: "{{TODO: 수치 3}}" },
-    { value: 0, prefix: "", suffix: "", label: "{{TODO: 라벨 4}}", display: "{{TODO: 수치 4}}" },
+    { value: 24, prefix: "", suffix: "시간", label: "원고 확정 후 당일 기사 송출", display: "" },
+    { value: 100, prefix: "", suffix: "%", label: "송출 완료 기사 URL 제공", display: "" },
+    { value: 365, prefix: "", suffix: "일", label: "영업·마케팅 자료로 지속 활용", display: "" },
+    { value: 0, prefix: "", suffix: "", label: "브랜드 맞춤 보도자료 송출", display: "1:1" },
   ],
-  note: "{{TODO: 수치 기준 일자 (예: 2026년 9월 기준)}}",
+  /** 집계 수치를 넣었을 때의 기준일자. 비워 두면 표시되지 않는다. */
+  note: "",
 } as const;
 
 /* -------------------------------------------------------------------------- */
