@@ -8,7 +8,7 @@ import { isTodo } from "@/lib/utils";
 
 export function Report() {
   return (
-    <section id={report.id} className="section-y bg-paper">
+    <section id={report.id} className="section-y bg-paper-muted">
       <div className="container-page">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* 텍스트 */}
@@ -21,7 +21,7 @@ export function Report() {
 
           {/* 리포트 목업 (모바일에서는 아래로) */}
           <Reveal delay={0.1} className="order-last lg:order-none">
-            <div className="overflow-hidden rounded-card border border-navy-900/10 bg-paper-muted shadow-xl shadow-navy-900/5">
+            <div className="overflow-hidden rounded-card border border-navy-900/10 bg-paper shadow-xl shadow-navy-900/5">
               <Image
                 src={report.mockup.src}
                 alt={report.mockup.alt}
@@ -39,7 +39,7 @@ export function Report() {
         <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-20">
           {report.bars.map((bar, i) => (
             <Reveal as="li" key={i} delay={i * 0.08}>
-              <div className="h-full rounded-card border border-navy-900/10 bg-paper-muted p-6">
+              <div className="h-full rounded-card border border-navy-900/10 bg-paper p-6">
                 <p className="text-sm font-semibold text-navy-700">
                   <Todoable text={bar.label} />
                 </p>
