@@ -133,7 +133,7 @@ export const report = {
 
 export const why = {
   id: "why",
-  eyebrow: "Why BENEWS",
+  eyebrow: "Why MEDIAHUB",
   headline: "왜 미디어허브인가요?",
   cards: [
     {
@@ -144,7 +144,7 @@ export const why = {
     {
       icon: "share" as IconKey,
       title: "포털 노출 & 제휴 매체 송출",
-      desc: "{{TODO: 송출 포털·제휴 언론사 수}}로 브랜드 소식을 넓게 알립니다.",
+      desc: "**200여 개 제휴 언론사**로 브랜드 소식을 넓게 알립니다.",
     },
     {
       icon: "workflow" as IconKey,

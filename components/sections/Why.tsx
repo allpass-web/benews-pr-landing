@@ -1,5 +1,5 @@
 import { why } from "@/content/site";
-import { Eyebrow, SectionHeading, Todoable } from "@/components/ui/Text";
+import { Emphasis, Eyebrow, SectionHeading } from "@/components/ui/Text";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/motion/Reveal";
 
@@ -23,7 +23,7 @@ export function Why() {
                   {card.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/75 md:text-base">
-                  <Todoable text={card.desc} />
+                  <Emphasis text={card.desc} tone="light" />
                 </p>
               </div>
             </Reveal>
